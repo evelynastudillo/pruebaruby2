@@ -1,8 +1,24 @@
+data = []
 file = File.open('alumnos.csv', 'r')
-p data = file.readlines.map(&:chomp)
+data = file.readlines.map(&:chomp)
 file.close
 
-def promedio
+  def promedio(data)
+    file = File.new('average.txt', 'w')
+    data.each do |line|
+    ls = line.split(', ')
+       name = ls[0]
+       calif = ls[1..5].each.map(&:to_i)
+       suma = 0
+         calif.each do |num|
+           suma += num
+  end
+   average = suma.to_f / calif.size
+   file.puts "El promedio de #{name} es #{average}"
+      end
+file.close
+    end
+  promedio(data)
 
 
 
