@@ -17,6 +17,7 @@ file.close
    file.puts "El promedio de #{name} es #{average}"
       end
 file.close
+puts "Se ha creado tu archivo"
     end
 
   def inasistencias(data)
@@ -26,7 +27,7 @@ file.close
        calif = ls[1..5].each.map(&:to_i)
        p leave = calif.count(0)
        if leave >= 1
-         puts "El alumno #{name} tiene #{leave} inasistencias"
+         puts "Alumne #{name} tiene #{leave} inasistencias"
        end
     end
   end
@@ -45,11 +46,13 @@ file.close
   if average >= min_approved
     puts "#{name} aprueba con nota #{average}"
   end
-   end
+  
+  end
+  return nil
 end
+aprobados(data)
 
-
-puts 'OPCIONES'
+puts 'INGRESE SUS OPCIONES'
     opcion = 0
     while opcion != 4
 
