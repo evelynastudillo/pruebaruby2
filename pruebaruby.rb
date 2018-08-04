@@ -34,6 +34,7 @@ file.close
   inasistencias(data)
 
  def aprobados(data)
+   min_approved = 5
    data.each do |line|
    ls = line.split(', ')
       name = ls[0]
@@ -43,12 +44,18 @@ file.close
           suma += num
  end
   average = suma.to_f / calif.size
-end    
- end
-puts 'Opciones'
+  if average >= min_approved
+    puts "#{name} aprueba con nota #{average}"
+  end
+   end
+end
+aprobados(data)
+
+puts 'OPCIONES'
     opcion = 0
     while opcion != 4
-      puts "***************************"
+
+      puts "____________________________"
       puts '1 = Promedio de cada alumno'
       puts '2 = Inasistencias Totales'
       puts '3 = Alumnos Aprobados'
