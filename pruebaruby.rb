@@ -48,6 +48,7 @@ file.close
    end
 end
 
+
 puts 'OPCIONES'
     opcion = 0
     while opcion != 4
