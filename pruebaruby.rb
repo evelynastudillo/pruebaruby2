@@ -18,7 +18,6 @@ file.close
       end
 file.close
     end
-  promedio(data)
 
   def inasistencias(data)
     data.each do |line|
@@ -31,7 +30,6 @@ file.close
        end
     end
   end
-  inasistencias(data)
 
  def aprobados(data)
    min_approved = 5
@@ -49,7 +47,6 @@ file.close
   end
    end
 end
-aprobados(data)
 
 puts 'OPCIONES'
     opcion = 0
@@ -65,11 +62,11 @@ puts 'OPCIONES'
 
       puts case opcion
     when '1'
-      promedio
+      promedio(data)
     when '2'
-      inasistencias
+      inasistencias(data)
     when '3'
-      aprobados
+      aprobados(data)
     else
       exit
       end
