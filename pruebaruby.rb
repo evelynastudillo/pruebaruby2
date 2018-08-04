@@ -20,10 +20,31 @@ file.close
     end
   promedio(data)
 
+  def inasistencias(data)
+    data.each do |line|
+    ls = line.split(', ')
+       name = ls[0]
+       calif = ls[1..5].each.map(&:to_i)
+       p leave = calif.count(0)
+       if leave >= 1
+         puts "El alumno #{name} tiene #{leave} inasistencias"
+       end
+    end
+  end
+  inasistencias(data)
 
-
-
-
+ def aprobados(data)
+   data.each do |line|
+   ls = line.split(', ')
+      name = ls[0]
+      calif = ls[1..5].each.map(&:to_i)
+      suma = 0
+        calif.each do |num|
+          suma += num
+ end
+  average = suma.to_f / calif.size
+end    
+ end
 puts 'Opciones'
     opcion = 0
     while opcion != 4
