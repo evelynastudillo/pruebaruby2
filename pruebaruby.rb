@@ -40,7 +40,7 @@ file.close
       suma = 0
         calif.each do |num|
           suma += num
- end
+     end
   average = suma.to_f / calif.size
   if average >= min_approved
     puts "#{name} aprueba con nota #{average}"
